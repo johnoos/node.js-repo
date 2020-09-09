@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  function Person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+  }
+  </script>
+</head>
+<body>
+
+<p>The JavaScript prototype property allows you to add new
+<br>properties (optionally already initialised) and methods to an
+existing prototype:</p>
+
+<p id="demo"></p>
+
+<script>
+Person.prototype.language = "English";
+Person.prototype.haircolour = "brown";
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName
+};
+var myFather = new Person("John", "Doe", 50, "blue");
+myFather.haircolour = "grey";
+document.getElementById("demo").innerHTML =
+            "My father is " + myFather.name()
+            + " , he\'s " + myFather.language
+            + ", and his hair is " + myFather.haircolour;
+</script>
+
+</body>
+</html>

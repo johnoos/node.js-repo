@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buttons and Dates</title>
+</head>
+<body>
+
+<button type="button"
+onclick="document.getElementById('demo1').innerHTML = 'Time now is ' + new Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo1">Time now will display here</p>
+
+<button type="button"
+onclick="document.getElementById('demo2').innerHTML = 'My date of birth is '
+                                                      + new Date(55,10,28)">
+Click me to display my date of birth.</button>
+
+<p id="demo2">My date of birth will display here</p>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  // Constructor function - sets up a 'prototype'
+  function Person(firstName, lastName, id) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.id = id;
+      this.fullName = function() {
+         return this.firstName + " " + this.lastName;
+      }
+  };
+  </script>
+</head>
+<body>
+
+<p>Note that the term 'class' is not used in Javascript,
+<br>but rather the word 'prototype.'
+<br>All objects inherit from properties and methods from
+their prototype object.</p>
+
+<p id="demo"></p>
+
+<script>
+
+var customer = new Person("John", "Doe", 5566);
+document.getElementById("demo").innerHTML = customer.fullName();
+</script>
+</body>
+</html>
